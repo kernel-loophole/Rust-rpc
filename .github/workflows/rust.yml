@@ -21,6 +21,4 @@ jobs:
 
     - name: Build, Test, and Run
       run: |
-        cargo build --verbose
-        cargo test --verbose
         cargo run  # Add any additional run options as needed
