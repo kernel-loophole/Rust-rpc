@@ -20,5 +20,5 @@ jobs:
         toolchain: stable
 
     - name: Build, Test, and Run
-      run: |
-        cargo run  # Add any additional run options as needed
+      run: 
+        cargo run  
