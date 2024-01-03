@@ -1,0 +1,26 @@
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch as needed
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set Up Rust
+      uses: actions/setup-rust@v1
+      with:
+        rust-version: stable
+
+    - name: Build, Test, and Run
+      run: |
+        cargo build --verbose
+        cargo test --verbose
+        cargo run  # Add any additional run options as needed
